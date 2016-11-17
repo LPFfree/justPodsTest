@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <MBProgressHUD.h>
 @interface ViewController ()
 
 @end
@@ -16,6 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
+    hud.labelText =  @"加载中...";
+    hud.color = [UIColor colorWithWhite:0.5 alpha:0.5];
+    [hud show:YES];
+    [hud hide:YES afterDelay:2];
+    [self.view addSubview:hud];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
