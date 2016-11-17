@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"test123");
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.view];
     hud.labelText =  @"加载中...";
     hud.color = [UIColor colorWithWhite:0.5 alpha:0.5];
